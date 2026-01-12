@@ -1,0 +1,7 @@
+dist/
+node_modules/
+.husky/
+.vscode/
+src/*.d.ts
+src/polyfills/
+*.cjs

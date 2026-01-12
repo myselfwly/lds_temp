@@ -1,0 +1,220 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 100% 50%;
+    --destructive-foreground: 210 40% 98%;
+    --ring: 215 20.2% 65.1%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+    --ring: 217.2 32.6% 17.5%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: #535bf2;
+}
+
+body,
+html {
+  height: 100%;
+  width: 100%;
+  min-width: 320px;
+  min-height: 100vh;
+  user-select: none;
+  overflow: hidden;
+  font-family:
+    Microsoft YaHei-Regular,
+    Microsoft YaHei;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+  outline: none;
+}
+
+button:hover {
+  border-color: #646cff;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+img {
+  -webkit-user-drag: none;
+}
+
+/* Header 组件样式（使用原生 CSS 嵌套 + Tailwind @apply） */
+@layer components {
+  .pc-header,
+  .header {
+    @apply flex h-[54px] items-center justify-between px-[14px];
+  }
+
+  .pc-header__left,
+  .headerLeft {
+    @apply flex items-center text-foreground;
+  }
+
+  .pc-header__logo,
+  .logo {
+    @apply relative w-[22px] h-[22px];
+  }
+
+  .pc-header__title,
+  .pageTitle {
+    @apply ml-2 text-sm;
+  }
+
+  .pc-header__right,
+  .headerRight {
+    @apply flex items-center;
+  }
+
+  .pc-vip-badge {
+    @apply h-[25px] pl-[28px] pr-[5px] text-[12px] -translate-y-[3px] flex justify-center items-center mr-[10px] cursor-pointer;
+
+    &.is-locked {
+      @apply w-[130px];
+
+      & span {
+        @apply inline-block mt-[7px] text-[#854c00];
+      }
+    }
+
+    &.is-unlocked {
+      @apply w-[87px];
+
+      & span {
+        @apply inline-block mt-[7px] text-[#3b3b3b];
+      }
+    }
+  }
+
+  /* 旧 SCSS 类名映射：vipLock / vipInfoUnlock */
+  .vipLock,
+  .vipInfoUnlock {
+    @apply h-[25px] pl-[28px] pr-[5px] text-[12px] -translate-y-[3px] flex justify-center items-center mr-[10px] cursor-pointer;
+  }
+
+  .vipLock {
+    @apply w-[130px];
+  }
+
+  .vipLock span {
+    @apply inline-block mt-[7px] text-[#854c00];
+  }
+
+  .vipInfoUnlock {
+    @apply w-[87px];
+  }
+
+  .vipInfoUnlock span {
+    @apply inline-block mt-[7px] text-[#3b3b3b];
+  }
+
+  .pc-header__actions,
+  .options {
+    @apply flex items-center;
+  }
+
+  .pc-header__btn,
+  .actionBtn {
+    @apply relative flex justify-center items-center w-[30px] h-[30px] min-w-0 text-[14px] transition-all ml-[5px] rounded-[2px] cursor-pointer;
+  }
+
+  /* 默认按钮的 hover/active（排除关闭按钮） */
+  .pc-header__btn:not(.pc-header__btn--close):hover,
+  .actionBtn:not(.close):hover {
+    @apply bg-[#eff5f8];
+  }
+
+  .pc-header__btn:not(.pc-header__btn--close):active,
+  .actionBtn:not(.close):active {
+    @apply bg-[#cfe3ff];
+  }
+
+  /* 关闭按钮颜色 */
+  .pc-header__btn--close {
+    @apply hover:bg-[#fe7452] active:bg-[#ff6039];
+  }
+
+  /* 旧 SCSS 关闭按钮图标变白 */
+  .actionBtn.close:hover .icon,
+  .actionBtn.close:hover > svg {
+    @apply text-white;
+  }
+}

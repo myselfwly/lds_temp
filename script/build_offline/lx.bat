@@ -1,0 +1,1 @@
+tsc && vite build --mode lx && SET NODE_OPTIONS=--openssl-legacy-provider && encrypt-bundler bundle --configfile=encrypt-bundler.lx.config.js

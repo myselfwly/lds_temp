@@ -1,0 +1,1 @@
+tsc && vite build --mode lds
