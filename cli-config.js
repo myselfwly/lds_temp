@@ -1,6 +1,6 @@
 module.exports = {
   /** 项目名，作为支付中心和打点的产品名 */
-  projectName: "proc_opt",
+  projectName: "temp_key",
   /** 中文标题 */
   title: "模板项目",
   /** 是否使用路由 */

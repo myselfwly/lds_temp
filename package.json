@@ -1,5 +1,5 @@
 {
-  "name": "proc_opt",
+  "name": "temp_key",
   "private": true,
   "version": "0.0.0",
   "type": "commonjs",
@@ -29,7 +29,7 @@
     "analyze": "vite-bundle-visualizer"
   },
   "dependencies": {
-    "@lds/bridge-modal": "^1.0.4",
+    "@lds/bridge-modal": "^1.0.8",
     "@lds/cef-bridge": "^1.14.5",
     "@radix-ui/react-dialog": "^1.0.5",
     "@radix-ui/react-slot": "^1.0.2",

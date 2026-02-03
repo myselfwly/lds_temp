@@ -24,18 +24,6 @@ if not exist "%SOURCE_DIR%" (
     exit /b 1
 )
 
-REM 如果目标目录存在，询问是否覆盖
-if exist "%TARGET_DIR%" (
-    echo 目标目录已存在: %TARGET_DIR%
-    set /p OVERWRITE="是否覆盖? (Y/N): "
-    if /i not "!OVERWRITE!"=="Y" (
-        echo 操作已取消
-        exit /b
-    )
-    echo 正在删除旧目录...
-    rmdir /s /q "%TARGET_DIR%"
-)
-
 REM 创建目标目录
 mkdir "%TARGET_DIR%"
 
