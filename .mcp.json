@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "test_ai_api": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "apifox-mcp-server@latest",
+        "--project-id=7795789"
+      ],
+      "env": {
+        "APIFOX_ACCESS_TOKEN": "APS-xoIeTdMvtlOk6jcGhx6NaicZWtUwwPYy"
+      }
+    }
+  }
+}

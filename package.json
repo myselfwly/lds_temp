@@ -1,8 +1,26 @@
 {
-  "name": "temp_key",
+  "name": "winopt_assistant",
   "private": true,
   "version": "0.0.0",
   "type": "commonjs",
+  "repository": {
+    "type": "git",
+    "url": "git@codeup.aliyun.com:master/group_clean/winopt_assistant/winopt_assistant_fe/winopt_assistant.git"
+  },
+  "bugs": {
+    "url": "https://devops.aliyun.com/projex/project/1955e472d14cfd3f18b2987f7a"
+  },
+  "homepage": "https://codeup.aliyun.com/master/group_clean/winopt_assistant/winopt_assistant_fe/winopt_assistant",
+  "docs": {
+    "requirement": "https://alidocs.dingtalk.com/i/nodes/ZgpG2NdyVXaoojgmIbOZXng9JMwvDqPk?iframeQuery=utm_source%3Dportal%26utm_medium%3Dportal_recent&rnd=0.11359624530721124",
+    "ui": "https://mastergo.com/file/183109416529369?fileOpenFrom=project&page_id=M",
+    "api": {
+      "url": "https://app.apifox.com/project/7795789",
+      "PROJECT_ID": "7795789",
+      "mcp_cmd": "claude mcp add \"api_mcp_PROJECT_ID\" --transport stdio --scope project -e APIFOX_ACCESS_TOKEN=APS-xoIeTdMvtlOk6jcGhx6NaicZWtUwwPYy -- npx -y apifox-mcp-server@latest --project-id=PROJECT_ID"
+    },
+    "jenkins": "http://192.168.11.23:8181/job/group_clean/job/winopt_assistant_group/job/front/"
+  },
   "config": {
     "commitizen": {
       "path": "git-cz"

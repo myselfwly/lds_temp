@@ -56,3 +56,22 @@ export function formatSizeUnits(bytes: number) {
   }
   return result;
 }
+
+/**
+ * 1B
+ */
+export const oneB = 1;
+/**
+ * 1KB
+ */
+export const oneKB = 1024 * oneB;
+/**
+ * 1MB
+ */
+export const oneMB = 1024 * oneKB;
+/**
+ * 1GB
+ */
+export const oneGB = 1024 * oneMB;
+
+export const oneTB = 1024 * oneGB;

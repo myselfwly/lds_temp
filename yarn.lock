@@ -1641,15 +1641,12 @@
     "@jridgewell/resolve-uri" "^3.1.0"
     "@jridgewell/sourcemap-codec" "^1.4.14"
 
-"@lds/bridge-modal@^1.0.4":
-  version "1.0.4"
-  resolved "https://packages.aliyun.com/5f8fd27993de782518723909/npm/npm-registry/@lds/bridge-modal/-/@lds/bridge-modal-1.0.4.tgz#643add0906226f88a84591282013b09b89cdf00c"
-  integrity sha512-Yd3KnBRJZEmIbflP7uYTEBBjbEJebePNJhTVfTDUn2kEjZT9vCijjgPmlyS6B7UGx3vKTHSwIR0/cFAFSfKQTQ==
-  dependencies:
-    "@lds/cef-bridge" "^1.14.1"
-    lodash-es "^4.17.21"
+"@lds/bridge-modal@^1.0.8":
+  version "1.0.8"
+  resolved "https://packages.aliyun.com/5f8fd27993de782518723909/npm/npm-registry/@lds/bridge-modal/-/@lds/bridge-modal-1.0.8.tgz#70a22aad071608b89d2a37e31a2548c48364ec3b"
+  integrity sha512-EuRvve8avRKlcT5tVTPPisAfafw50W/yLvvBMimOjYDQA7+CNWm+tp1d+etY/ozEo5r8aIKRnNA5XmdZdHs/SA==
 
-"@lds/cef-bridge@^1.14.1", "@lds/cef-bridge@^1.14.5":
+"@lds/cef-bridge@^1.14.5":
   version "1.14.5"
   resolved "https://packages.aliyun.com/5f8fd27993de782518723909/npm/npm-registry/@lds/cef-bridge/-/@lds/cef-bridge-1.14.5.tgz#3d312fbaec1543d2845fecb0d52a9b1840af6583"
   integrity sha512-QnkedDRPLhauQG3NxzsKqUWqYS8zaHjKOVpTwektVOIuFC+LP81mgbkjlszq7+7HTnx89d4G9lEVKxyVV678lQ==
