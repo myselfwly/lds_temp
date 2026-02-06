@@ -47,3 +47,5 @@ pm2Logs/
 *.km
 script/store.sh
 project_doc.*
+
+.claude/
