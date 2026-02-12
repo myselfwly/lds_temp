@@ -111,9 +111,10 @@ export default defineConfig(({ command, mode }) => {
       host: "0.0.0.0",
       port: 5174,
       proxy: {
-        "/example": {
-          target: "https://example.ludashi.com",
+        "/api": {
+          target: "http://192.168.20.59:8012",
           changeOrigin: true,
+          rewrite: (path) => path.replace(/^\/api/, ""),
         },
       },
     },
