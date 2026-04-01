@@ -5,6 +5,7 @@
 import { create } from "zustand";
 
 import { generatePreviewUrl, getFileList, uploadFile } from "../services";
+import { base64Encode } from "../utils/base64";
 
 /**
  * 最近文件类型
@@ -138,8 +139,13 @@ export const useAppStore = create<AppState>((set, get) => ({
 
   // 打开网络文件预览
   openUrlPreview: (url: string) => {
+    // 对用户输入的URL进行base64编码
+    const base64Url = base64Encode(url);
+    const previewUrl = `http://192.168.20.59:8012/onlinePreview?url=${encodeURIComponent(
+      base64Url,
+    )}`;
     window.location.hash = `#/preview?url=${encodeURIComponent(
-      url,
+      previewUrl,
     )}&name=网络文件`;
   },
 }));
